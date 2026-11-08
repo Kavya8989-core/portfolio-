@@ -178,3 +178,24 @@ html, body {
 .menu-btn:hover span {
     background-color: rgb(254, 242, 7);
 }
+@font-face {
+    font-family: 'RageFont';
+    src: url('../assets/fonts/font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.banner-text {
+    font-family: 'RageFont', sans-serif;
+}
+.banner-text {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'RageFont', sans-serif;
+    font-size: 40px;
+    color: rgba(255, 0, 0, 0.836);
+    text-align: center;
+    z-index: 2;
+}
