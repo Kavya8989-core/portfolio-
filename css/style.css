@@ -100,7 +100,7 @@ html, body {
     position: relative;
 }
 
-.banner img {
+.banner > img:first-child {
     width: 100%;
     height: auto;
     display: block;
@@ -199,3 +199,27 @@ html, body {
     text-align: center;
     z-index: 2;
 }
+.banner .rush-logo {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    top: 55%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.game-description {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    width: 35%;
+    color: white;
+    z-index: 3;
+}
+
+.game-description h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
