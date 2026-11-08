@@ -164,3 +164,17 @@ html, body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.12);
+}
+.menu-btn span {
+    transition: background-color 0.3s ease, transform 0.4s ease, opacity 0.3s ease;
+}
+
+.menu-btn:hover span {
+    background-color: rgb(254, 242, 7);
+}
