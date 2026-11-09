@@ -271,4 +271,47 @@ body.header-hidden .menu-btn {
     color: yellow;
     text-decoration: underline;
 }
+.banner .docs-logo {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    top: 55%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.banner .docs-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.docs-description {
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    width: 25%;
+    z-index: 3;
+    text-align: center;
+}
+
+.docs-description h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 16px;
+    color: rgb(252, 250, 250);
+    transition: color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.docs-description {
+    position: absolute;
+    left: 32%;
+    top: 70%;
+    z-index: 5;
+}
+.docs-description h2:hover {
+    color: yellow;
+    text-decoration: underline;
+}
 
