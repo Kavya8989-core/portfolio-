@@ -443,4 +443,84 @@ html {
         4% 97%, 2% 99%, 0% 97%
     );
 }
+.team-heading {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    text-align: center;
+}
+
+.team-heading h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 38px;
+    color: red;
+    white-space: nowrap;
+    
+}
+.team-description {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 175%;
+    z-index: 5;
+    text-align: center;
+}
+
+.team-description p {
+    font-family: 'RageFont', sans-serif;
+    font-size: 23px;
+    color: #8B4513;
+    line-height: 1.6;
+    text-align: center;
+}
+.position-request-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 100px;
+    z-index: 5;
+}
+
+.position-request-container .learn-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100px;
+    object-fit: fill;
+    transition: opacity 0.4s ease;
+}
+
+.position-request-container .normal {
+    opacity: 1;
+}
+
+.position-request-container .hover {
+    opacity: 0;
+}
+
+.position-request-container:hover .normal {
+    opacity: 0;
+}
+
+.position-request-container:hover .hover {
+    opacity: 1;
+}
+
+.position-request-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'RageFont', sans-serif;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+    z-index: 2;
+}
 
