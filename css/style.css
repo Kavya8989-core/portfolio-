@@ -222,4 +222,28 @@ html, body {
     font-size: 28px;
     margin-bottom: 10px;
 }
+.banner .rush-logo {
+    transition: transform 0.3s ease;
+}
+
+.banner .rush-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.game-description p {
+    font-family: 'RageFont', sans-serif;
+    font-size: 16px;
+    color: red;
+    margin-top: 5px;
+    text-align: center;
+    transform: translateX(-250px);
+}
+.game-description p {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.game-description p:hover {
+    color: yellow;
+    text-decoration: underline;
+}
 
