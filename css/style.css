@@ -232,10 +232,11 @@ html, body {
 .game-description p {
     font-family: 'RageFont', sans-serif;
     font-size: 16px;
-    color: red;
+    color: rgb(245, 244, 244);
     margin-top: 5px;
-    text-align: center;
-    transform: translateX(-250px);
+    transform: translateX(50px);
+    display: inline-block;
+    width: fit-content;
 }
 .game-description p {
     transition: color 0.3s ease;
@@ -243,6 +244,30 @@ html, body {
 }
 
 .game-description p:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+.logo,
+.menu-btn {
+    position: fixed;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+body.header-hidden .logo {
+    transform: translateY(-150%);
+    opacity: 0;
+}
+
+body.header-hidden .menu-btn {
+    transform: translateY(-150%);
+    opacity: 0;
+}
+.game-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.game-link:hover p {
     color: yellow;
     text-decoration: underline;
 }
