@@ -567,8 +567,82 @@ html {
     position: relative;
 }
 
-.games-banner img {
+.games-banner > img:first-child {
     width: 100%;
     height: 1000px;
     display: block;
+    object-fit: cover;
 }
+.games-heading {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'RageFont', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 63, 63);
+    z-index: 5;
+    white-space: nowrap;
+}
+.games-description {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 5;
+    text-align: center;
+}
+
+.games-description p {
+    font-family: 'RageFont', sans-serif;
+    font-size: 23px;
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+}
+.games-rush-logo {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    top: 65%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.games-rush-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.games-extinction-logo {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.games-extinction-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.games-brothers-logo {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    top: 65%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.games-brothers-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}   
