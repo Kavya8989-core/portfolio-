@@ -317,4 +317,59 @@ html, body {
     color: yellow;
     text-decoration: underline;
 }
+.learn-more-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 100px;
+    z-index: 4;
+}
+
+
+.learn-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 280px;
+    height: 100px;
+    object-fit: fill;
+    transition: opacity 0.4s ease;
+}
+
+
+.learn-more.normal {
+    opacity: 1;
+}
+
+
+.learn-more.hover {
+    opacity: 0;
+}
+
+.learn-more-container:hover .learn-more.normal {
+    opacity: 0;
+}
+
+.learn-more-container:hover .learn-more.hover {
+    opacity: 1;
+}
+
+
+.learn-more-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'RageFont', sans-serif;
+    font-size: 28px;
+    color: rgb(4, 4, 4);
+    white-space: nowrap;
+    z-index: 2;
+}
+html {
+    scroll-behavior: smooth;
+}
 
