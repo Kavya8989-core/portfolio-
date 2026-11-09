@@ -17,7 +17,8 @@
          class="logo"
          alt="RAGE DEVS Logo">
 
-    <button class="menu-btn" aria-label="Open menu">
+    <button class="menu-btn" aria-label="Open menu"
+        aria-controls="menuPanel" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -26,6 +27,7 @@
     <div class="menu-panel" id="menuPanel">
         <img src="assets/images/menu.png" alt="Menu">
         <a href="#team-banner" class="menu-link">TEAMS</a>
+        <a href="#games-banner" class="menu-link games-menu-link">GAMES</a>
     </div>
 
 </header>
@@ -114,7 +116,7 @@
 </div>
 </div>
 </section>
-<section class="games-banner">
+<section class="games-banner" id="games-banner">
     <img src="assets/images/games.jpeg" alt="Our Games">
     <div class="games-heading">
     OUR GAMES

@@ -6,7 +6,28 @@ menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
     menuPanel.classList.toggle("active");
 });
+document.querySelectorAll(".menu-link").forEach(link => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
 
+        const targetId = link.getAttribute("href");
+        const target = document.querySelector(targetId);
+
+        if (target) {
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+            });
+        } else {
+            console.log("Target section not found:", targetId);
+        }
+
+        menuBtn.classList.remove("active");
+        menuPanel.classList.remove("active");
+    });
+});
 let lastScrollY = window.scrollY;
 let ticking = false;
 

@@ -646,3 +646,6 @@ html {
 .games-brothers-logo:hover {
     transform: translate(-50%, -50%) scale(1.08);
 }   
+.games-menu-link {
+    top: 35%;
+}
