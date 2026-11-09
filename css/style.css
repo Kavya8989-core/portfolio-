@@ -649,3 +649,121 @@ html {
 .games-menu-link {
     top: 35%;
 }
+.red-banner .instagram-link {
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    z-index: 5;
+}
+
+.red-banner .instagram-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+.red-banner .discord-link {
+    position: absolute;
+    top: 38%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    z-index: 999;
+    display: block;
+}
+
+.red-banner .discord-logo {
+    display: block;
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.red-banner .discord-link:hover .discord-logo {
+    transform: scale(1.1);
+}
+.red-banner > img:first-child {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+.red-banner {
+    position: relative;
+    background: #e6393f;
+}
+
+.red-banner::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #890105;
+    z-index: 2;
+
+    clip-path: polygon(
+        0 75%, 3% 60%, 5% 85%, 8% 45%,
+        11% 70%, 14% 30%, 17% 65%, 20% 40%,
+        23% 80%, 26% 35%, 30% 65%, 34% 25%,
+        38% 70%, 42% 40%, 46% 80%, 50% 30%,
+        54% 65%, 58% 35%, 62% 75%, 66% 25%,
+        70% 65%, 74% 35%, 78% 80%, 82% 30%,
+        86% 70%, 90% 40%, 94% 75%, 97% 35%,
+        100% 65%, 100% 100%, 0 100%
+    );
+}
+.stay-connected {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    font-family: 'RageFont', sans-serif;
+    font-size: 28px;
+    color: white;
+    z-index: 5;
+    white-space: nowrap;
+}
+.instagram-link {
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    z-index: 5;
+}
+
+.instagram-logo {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.instagram-link:hover .instagram-logo {
+    filter: brightness(0);
+    transform: scale(1.1);
+}
+#discord-link {
+    position: absolute;
+    top: 38%;
+    left: 27%;
+    z-index: 999;
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+#discord-link img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+#discord-link:hover img {
+    transform: scale(1.1);
+}
