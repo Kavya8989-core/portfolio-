@@ -8,16 +8,27 @@ menuBtn.addEventListener("click", () => {
 });
 
 let lastScrollY = window.scrollY;
+let ticking = false;
 
 window.addEventListener("scroll", () => {
-    let currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        siteHeader.classList.add("header-hidden");
-    } 
-    else if (currentScrollY < lastScrollY) {
-        siteHeader.classList.remove("header-hidden");
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+
+            let currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                siteHeader.classList.add("header-hidden");
+            }
+            else if (currentScrollY < lastScrollY) {
+                siteHeader.classList.remove("header-hidden");
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+        });
+
+        ticking = true;
     }
 
-    lastScrollY = currentScrollY;
-});
+}, { passive: true });

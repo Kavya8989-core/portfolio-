@@ -4,11 +4,18 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
     width: 100%;
     min-height: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
     overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow: visible;
 }
 
 .hero {
@@ -59,7 +66,7 @@ html, body {
     transition: all 0.4s ease;
 }
 
-/* Hamburger to Cross Animation */
+
 
 .menu-btn.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
@@ -115,7 +122,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Torn paper transition */
+
 .hero::after {
     content: "";
     position: absolute;
@@ -198,7 +205,7 @@ html, body {
 
     font-family: 'RageFont', sans-serif;
     font-size: 40px;
-    color: rgba(255, 0, 0, 0.836);
+    color: rgba(255, 70, 70, 0.836);
     text-align: center;
     z-index: 2;
 }
@@ -455,7 +462,7 @@ html {
 .team-heading h2 {
     font-family: 'RageFont', sans-serif;
     font-size: 38px;
-    color: red;
+    color: rgb(254, 74, 74);
     white-space: nowrap;
     
 }
@@ -547,4 +554,21 @@ html {
 .menu-link:hover {
     text-decoration: underline;
     text-decoration-color: #8B4513;
+}
+.menu-panel {
+    pointer-events: none;
+}
+
+.menu-panel.active {
+    pointer-events: auto;
+}
+.games-banner {
+    width: 100%;
+    position: relative;
+}
+
+.games-banner img {
+    width: 100%;
+    height: 1000px;
+    display: block;
 }
