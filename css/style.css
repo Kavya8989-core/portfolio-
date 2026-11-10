@@ -1011,3 +1011,360 @@ body {
     opacity: 1;
     translate: 0 0;
 }
+
+/* =========================================
+   TABLET + MOBILE RESPONSIVE DESIGN
+   Desktop CSS remains untouched
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER AND MENU */
+    .logo {
+        width: 75px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .menu-btn {
+        top: 22px;
+        right: 20px;
+        width: 35px;
+    }
+
+    .menu-panel {
+        width: 80%;
+        height: 650px;
+    }
+
+    .menu-link {
+        left: 50%;
+        font-size: 32px;
+    }
+
+    .games-menu-link {
+        top: 35%;
+    }
+
+    .contact-menu-link {
+        top: 45%;
+        font-size: 25px;
+    }
+
+    .about-menu-link {
+        top: 55%;
+        left: 50%;
+        font-size: 19px;
+    }
+
+    .privacy-menu-link {
+        top: 63%;
+        left: 50%;
+        font-size: 20px;
+    }
+
+    .support-menu-link {
+        top: 70%;
+        left: 50%;
+        font-size: 20px;
+    }
+
+
+    /* LEARN MORE */
+    .learn-more-container {
+        width: 220px;
+        height: 80px;
+    }
+
+    .learn-more {
+        width: 220px;
+        height: 80px;
+    }
+
+    .learn-more-text {
+        font-size: 22px;
+    }
+
+
+    /* CURRENT UPDATES BANNER */
+    .banner > img:first-child {
+        height: 1100px;
+        object-fit: cover;
+    }
+
+    .banner-text {
+        top: 6%;
+        left: 50%;
+        width: 95%;
+        font-size: 27px;
+    }
+
+    .banner .rush-logo {
+        width: 200px;
+        top: 19%;
+        left: 50%;
+    }
+
+    .game-description {
+        top: 29%;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .game-description h2 {
+        font-size: 22px;
+    }
+
+    .game-description p {
+        font-size: 15px;
+        transform: none;
+    }
+
+    .banner .docs-logo {
+        width: 200px;
+        top: 43%;
+        left: 50%;
+    }
+
+    .docs-description {
+        top: 54%;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+    }
+
+    .docs-description h2 {
+        font-size: 15px;
+    }
+
+    .banner .upcoming-logo {
+        width: 140px;
+        top: 70%;
+        left: 50%;
+    }
+
+    .upcoming-link {
+        top: 83%;
+        left: 50%;
+    }
+
+    .upcoming-link h2 {
+        font-size: 15px;
+    }
+
+
+    /* TEAM SECTION */
+    .team-banner {
+        margin-top: -10px;
+    }
+
+    .team-banner img {
+        height: 650px;
+        object-fit: cover;
+    }
+
+    .team-heading {
+        top: 8%;
+        width: 95%;
+    }
+
+    .team-heading h2 {
+        font-size: 30px;
+    }
+
+    .team-description {
+        top: 160%;
+        width: 100%;
+    }
+
+    .team-description p {
+        font-size: 17px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .position-request-container {
+        width: 220px;
+        height: 80px;
+        top: 120%;
+    }
+
+    .position-request-container .learn-more {
+        width: 220px;
+        height: 80px;
+    }
+
+    .position-request-text {
+        font-size: 16px;
+    }
+
+
+    /* OUR GAMES SECTION */
+    .games-banner > img:first-child {
+        height: 1250px;
+        object-fit: cover;
+    }
+
+    .games-heading {
+        top: 5%;
+        font-size: 38px;
+    }
+
+    .games-description {
+        top: 13%;
+        width: 90%;
+    }
+
+    .games-description p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .games-rush-logo {
+        width: 220px;
+        top: 40%;
+        left: 50%;
+    }
+
+    .games-extinction-logo {
+        width: 220px;
+        height: 160px;
+        top: 62%;
+        left: 50%;
+    }
+
+    .games-brothers-logo {
+        width: 220px;
+        top: 84%;
+        left: 50%;
+    }
+
+
+    /* CONTACT SECTION */
+    .red-banner > img:first-child {
+        height: 430px;
+        object-fit: cover;
+    }
+
+    .stay-connected {
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+    }
+
+    .red-banner .instagram-link {
+        top: 35%;
+        left: 15%;
+    }
+
+    .red-banner .instagram-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .red-banner .discord-link {
+        top: 35%;
+        left: 45%;
+        width: 75px;
+        height: 75px;
+    }
+
+    .red-banner .discord-logo {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    .red-banner .github-link {
+        top: 35%;
+        left: 75%;
+        width: 75px;
+        height: 75px;
+    }
+
+    .red-banner .github-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .red-banner .privacy-policy {
+        top: 250px !important;
+        left: 200px !important;
+    }
+
+    .red-banner .privacy-policy a {
+        font-size: 17px !important;
+    }
+
+    .red-banner .support {
+        top: 270px !important;
+        right: 15px !important;
+    }
+
+    .red-banner .support a {
+        font-size: 17px !important;
+    }
+
+}
+
+
+/* =========================================
+   SMALLER MOBILE PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .menu-panel {
+        width: 90%;
+    }
+
+    .banner-text {
+        font-size: 23px;
+    }
+
+    .team-heading h2 {
+        font-size: 26px;
+    }
+
+    .team-description p {
+        font-size: 15px;
+    }
+
+    .games-heading {
+        font-size: 32px;
+    }
+
+    .games-description p {
+        font-size: 15px;
+    }
+
+    .games-rush-logo,
+    .games-brothers-logo {
+        width: 190px;
+    }
+
+    .games-extinction-logo {
+        width: 190px;
+        height: 140px;
+    }
+
+    .stay-connected {
+        font-size: 18px;
+    }
+
+    .red-banner .instagram-logo,
+    .red-banner .discord-logo,
+    .red-banner .github-logo {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .red-banner .discord-link,
+    .red-banner .github-link {
+        width: 60px;
+        height: 60px;
+    }
+
+}

@@ -1,0 +1,1013 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: clip;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 100px;
+    height: auto;
+    z-index: 10;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.4s ease;
+}
+
+
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+
+.menu-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 800px;
+    z-index: 5;
+
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.7s ease;
+}
+
+.menu-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+.menu-panel.active {
+    transform: translateY(0);
+}
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner > img:first-child {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #111;
+    z-index: 2;
+
+    clip-path: polygon(
+    0 35%,
+    4% 48%,
+    9% 30%,
+    13% 65%,
+    18% 42%,
+    23% 55%,
+    28% 20%,
+    34% 52%,
+    39% 38%,
+    44% 75%,
+    49% 45%,
+    54% 58%,
+    59% 25%,
+    64% 48%,
+    69% 68%,
+    74% 35%,
+    79% 55%,
+    84% 18%,
+    89% 47%,
+    94% 32%,
+    100% 60%,
+    100% 100%,
+    0 100%
+);
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 3;
+    pointer-events: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='white' stroke-linecap='round'%3E%3Cpath d='M0 35 L40 48 L90 30 L130 65 L180 42 L230 55 L280 20 L340 52 L390 38 L440 75 L490 45 L540 58 L590 25 L640 48 L690 68 L740 35 L790 55 L840 18 L890 47 L940 32 L1000 60' stroke-width='3' opacity='.85'/%3E%3Cpath d='M120 57 l18 5 M275 32 l12 8 M430 64 l15 4 M610 36 l14 7 M780 45 l17 5 M920 40 l12 5' stroke-width='2' opacity='.7'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.12);
+}
+.menu-btn span {
+    transition: background-color 0.3s ease, transform 0.4s ease, opacity 0.3s ease;
+}
+
+.menu-btn:hover span {
+    background-color: rgb(254, 242, 7);
+}
+@font-face {
+    font-family: 'RageFont';
+    src: url('../assets/fonts/font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.banner-text {
+    font-family: 'RageFont', sans-serif;
+}
+.banner-text {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'RageFont', sans-serif;
+    font-size: 40px;
+    color: rgba(255, 70, 70, 0.836);
+    text-align: center;
+    z-index: 2;
+}
+.banner .rush-logo {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    top: 55%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.game-description {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    width: 35%;
+    color: white;
+    z-index: 3;
+}
+
+.game-description h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.banner .rush-logo {
+    transition: transform 0.3s ease;
+}
+
+.banner .rush-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.game-description p {
+    font-family: 'RageFont', sans-serif;
+    font-size: 16px;
+    color: rgb(245, 244, 244);
+    margin-top: 5px;
+    transform: translateX(50px);
+    display: inline-block;
+    width: fit-content;
+}
+.game-description p {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.game-description p:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.site-header.header-hidden {
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+}
+.game-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.game-link:hover p {
+    color: yellow;
+    text-decoration: underline;
+}
+.banner .docs-logo {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    top: 55%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.banner .docs-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.docs-description {
+    position: absolute;
+    top: 75%;
+    left: 75%;
+    width: 25%;
+    z-index: 3;
+    text-align: center;
+}
+
+.docs-description h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 16px;
+    color: rgb(252, 250, 250);
+    transition: color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.docs-description {
+    position: absolute;
+    left: 32%;
+    top: 70%;
+    z-index: 5;
+}
+.docs-description h2:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+.learn-more-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 100px;
+    z-index: 4;
+}
+
+
+.learn-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 280px;
+    height: 100px;
+    object-fit: fill;
+    transition: opacity 0.4s ease;
+}
+
+
+.learn-more.normal {
+    opacity: 1;
+}
+
+
+.learn-more.hover {
+    opacity: 0;
+}
+
+.learn-more-container:hover .learn-more.normal {
+    opacity: 0;
+}
+
+.learn-more-container:hover .learn-more.hover {
+    opacity: 1;
+}
+
+
+.learn-more-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'RageFont', sans-serif;
+    font-size: 28px;
+    color: rgb(4, 4, 4);
+    white-space: nowrap;
+    z-index: 2;
+}
+html {
+    scroll-behavior: smooth;
+}
+.banner .upcoming-logo {
+    position: absolute;
+    width: 160px;
+    height: auto;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.banner .upcoming-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.upcoming-link {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translateX(-50%);
+    z-index: 5;
+    text-decoration: none;
+}
+
+.upcoming-link h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 16px;
+    color: white;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.upcoming-link:hover h2 {
+    color: rgb(254, 242, 7);
+    text-decoration: underline;
+    text-decoration-color: rgb(254, 242, 7);
+}
+.team-banner {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    margin-top: -15px;
+}
+
+.team-banner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+.banner {
+    clip-path: polygon(
+        0% 0%, 100% 0%,
+        100% 97%, 98% 99%, 96% 97%,
+        94% 100%, 92% 98%, 90% 100%,
+        88% 97%, 86% 99%, 84% 97%,
+        82% 100%, 80% 98%, 78% 100%,
+        76% 97%, 74% 99%, 72% 97%,
+        70% 100%, 68% 98%, 66% 100%,
+        64% 97%, 62% 99%, 60% 97%,
+        58% 100%, 56% 98%, 54% 100%,
+        52% 97%, 50% 99%, 48% 97%,
+        46% 100%, 44% 98%, 42% 100%,
+        40% 97%, 38% 99%, 36% 97%,
+        34% 100%, 32% 98%, 30% 100%,
+        28% 97%, 26% 99%, 24% 97%,
+        22% 100%, 20% 98%, 18% 100%,
+        16% 97%, 14% 99%, 12% 97%,
+        10% 100%, 8% 98%, 6% 100%,
+        4% 97%, 2% 99%, 0% 97%
+    );
+}
+.team-heading {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    text-align: center;
+}
+
+.team-heading h2 {
+    font-family: 'RageFont', sans-serif;
+    font-size: 38px;
+    color: rgb(254, 74, 74);
+    white-space: nowrap;
+    
+}
+.team-description {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 175%;
+    z-index: 5;
+    text-align: center;
+}
+
+.team-description p {
+    font-family: 'RageFont', sans-serif;
+    font-size: 23px;
+    color: #8B4513;
+    line-height: 1.6;
+    text-align: center;
+}
+.position-request-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 100px;
+    z-index: 5;
+}
+
+.position-request-container .learn-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100px;
+    object-fit: fill;
+    transition: opacity 0.4s ease;
+}
+
+.position-request-container .normal {
+    opacity: 1;
+}
+
+.position-request-container .hover {
+    opacity: 0;
+}
+
+.position-request-container:hover .normal {
+    opacity: 0;
+}
+
+.position-request-container:hover .hover {
+    opacity: 1;
+}
+
+.position-request-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'RageFont', sans-serif;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+    z-index: 2;
+}
+.menu-panel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-link {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    font-family: 'RageFont', sans-serif;
+    font-size: 45px;
+    color: #8B4513;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #8B4513;
+}
+.menu-panel {
+    pointer-events: none;
+}
+
+.menu-panel.active {
+    pointer-events: auto;
+}
+.games-banner {
+    width: 100%;
+    position: relative;
+}
+
+.games-banner > img:first-child {
+    width: 100%;
+    height: 1000px;
+    display: block;
+    object-fit: cover;
+}
+.games-heading {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'RageFont', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 63, 63);
+    z-index: 5;
+    white-space: nowrap;
+}
+.games-description {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 5;
+    text-align: center;
+}
+
+.games-description p {
+    font-family: 'RageFont', sans-serif;
+    font-size: 23px;
+    color: white;
+    line-height: 1.6;
+    text-align: center;
+}
+.games-rush-logo {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    top: 65%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.games-rush-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.games-extinction-logo {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.games-extinction-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.games-brothers-logo {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    top: 65%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.games-brothers-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}   
+.games-menu-link {
+    top: 35%;
+}
+.red-banner .instagram-link {
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    z-index: 5;
+}
+
+.red-banner .instagram-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+.red-banner .discord-link {
+    position: absolute;
+    top: 42%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    z-index: 999;
+    display: block;
+}
+
+.red-banner .discord-logo {
+    display: block;
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.red-banner .discord-link:hover .discord-logo {
+    filter: brightness(0);
+    transform: scale(1.1);
+}
+
+.red-banner > img:first-child {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+.red-banner {
+    position: relative;
+    background: #e6393f;
+}
+
+.red-banner::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #890105;
+    z-index: 2;
+
+    clip-path: polygon(
+        0 75%, 3% 60%, 5% 85%, 8% 45%,
+        11% 70%, 14% 30%, 17% 65%, 20% 40%,
+        23% 80%, 26% 35%, 30% 65%, 34% 25%,
+        38% 70%, 42% 40%, 46% 80%, 50% 30%,
+        54% 65%, 58% 35%, 62% 75%, 66% 25%,
+        70% 65%, 74% 35%, 78% 80%, 82% 30%,
+        86% 70%, 90% 40%, 94% 75%, 97% 35%,
+        100% 65%, 100% 100%, 0 100%
+    );
+}
+.stay-connected {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    font-family: 'RageFont', sans-serif;
+    font-size: 28px;
+    color: white;
+    z-index: 5;
+    white-space: nowrap;
+}
+.instagram-link {
+    position: absolute;
+    top: 38%;
+    left: 20%;
+    z-index: 5;
+}
+
+.instagram-logo {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.instagram-link:hover .instagram-logo {
+    filter: brightness(0);
+    transform: scale(1.1);
+}
+#discord-link {
+    position: absolute;
+    top: 38%;
+    left: 27%;
+    z-index: 999;
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+#discord-link img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+#discord-link:hover img {
+    transform: scale(1.1);
+    filter: brightness(0);
+}
+.red-banner .github-link {
+    position: absolute;
+    top: 52%;
+    left: 63%;
+    width: 70px;
+    height: 70px;
+    z-index: 100;
+    display: block;
+}
+
+.red-banner .github-logo {
+    display: block;
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.red-banner .github-link:hover .github-logo {
+    filter: brightness(0);
+    transform: scale(1.1);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.red-banner {
+    margin: 0;
+    padding: 0;
+}
+
+.red-banner > img:first-child {
+    display: block;
+}
+body {
+    background: #ad0309;
+}
+.red-banner .privacy-policy {
+    position: absolute;
+    top: 58%;
+    left: 75%;
+    z-index: 1000;
+    display: block;
+}
+
+.red-banner .privacy-policy a {
+    display: inline-block;
+    font-family: 'RageFont', sans-serif;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.red-banner .privacy-policy a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.red-banner .privacy-policy {
+    position: absolute !important;
+    top: 200px !important;
+    right: 10px !important;
+    z-index: 99999 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.red-banner .privacy-policy a {
+    color: black !important;
+    font-size: 24px !important;
+}
+.red-banner .support {
+    position: absolute !important;
+    top: 250px !important;
+    right: 400px !important;
+    z-index: 99999 !important;
+}
+
+.red-banner .support a {
+    color: black !important;
+    font-size: 24px !important;
+    font-family: 'RageFont', sans-serif;
+    text-decoration: none;
+}
+
+.red-banner .support a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.contact-menu-link {
+    top: 45%;
+}
+.about-menu-link {
+    top: 55%;
+    left: 35%;
+    font-size: 24px;
+}
+.menu-panel a {
+    position: absolute;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.menu-panel img {
+    pointer-events: none;
+}
+.privacy-menu-link {
+    top: 60%;
+    left: 29%;
+    font-size: 24px;
+}
+
+.support-menu-link {
+    top: 65%;
+    left: 23%;
+    font-size: 24px;
+}
+.learn-more-container {
+    opacity: 0;
+    animation: learnMoreFloat 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes learnMoreFloat {
+    from {
+        opacity: 0;
+        translate: 0 50px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+.banner-text {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.banner-text.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.banner .rush-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease, transform 0.3s ease;
+}
+
+.banner .rush-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.banner .docs-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.banner .docs-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.banner .docs-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.banner .upcoming-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.banner .upcoming-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.team-heading {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.team-heading.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-heading {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-heading.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-description {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-description.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-rush-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-rush-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-banner .games-extinction-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-banner .games-extinction-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-banner .games-brothers-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-banner .games-brothers-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
