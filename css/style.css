@@ -891,3 +891,93 @@ body {
     left: 23%;
     font-size: 24px;
 }
+.learn-more-container {
+    opacity: 0;
+    animation: learnMoreFloat 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes learnMoreFloat {
+    from {
+        opacity: 0;
+        translate: 0 50px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+.banner-text {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.banner-text.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.banner .rush-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease, transform 0.3s ease;
+}
+
+.banner .rush-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.banner .docs-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.banner .docs-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.banner .docs-logo:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.banner .upcoming-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.banner .upcoming-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.team-heading {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.team-heading.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-heading {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-heading.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-description {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-description.show {
+    opacity: 1;
+    translate: 0 0;
+}

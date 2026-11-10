@@ -1,11 +1,97 @@
-const menuBtn = document.querySelector(".menu-btn");
-const menuPanel = document.querySelector("#menuPanel");
-const siteHeader = document.querySelector(".site-header");
+const bannerSection = document.querySelector(".banner");
+const bannerText = document.querySelector(".banner-text");
 
-menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    menuPanel.classList.toggle("active");
+const bannerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            bannerText.classList.add("show");
+            bannerObserver.unobserve(bannerSection);
+        }
+    });
+}, {
+    threshold: 0.15
 });
+const rushLogo = document.querySelector(".banner .rush-logo");
+
+const rushObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            rushLogo.classList.add("show");
+            rushObserver.unobserve(rushLogo);
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+
+rushObserver.observe(rushLogo);
+const docsLogo = document.querySelector(".banner .docs-logo");
+
+const docsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            docsLogo.classList.add("show");
+            docsObserver.unobserve(docsLogo);
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+docsObserver.observe(docsLogo);
+const upcomingLogo = document.querySelector(".banner .upcoming-logo");
+
+const upcomingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            upcomingLogo.classList.add("show");
+            upcomingObserver.unobserve(upcomingLogo);
+        }
+    });
+}, {
+    threshold: 0
+});
+
+upcomingObserver.observe(upcomingLogo);
+const teamHeading = document.querySelector(".team-heading");
+
+const teamHeadingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            teamHeading.classList.add("show");
+            teamHeadingObserver.unobserve(teamHeading);
+        }
+    });
+}, { threshold: 0 });
+
+teamHeadingObserver.observe(teamHeading);
+const gamesHeading = document.querySelector(".games-heading");
+
+const gamesHeadingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            gamesHeading.classList.add("show");
+            gamesHeadingObserver.unobserve(gamesHeading);
+        }
+    });
+}, { threshold: 0 });
+
+gamesHeadingObserver.observe(gamesHeading);
+const gamesDescription = document.querySelector(".games-description");
+
+const gamesDescriptionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            gamesDescription.classList.add("show");
+            gamesDescriptionObserver.unobserve(gamesDescription);
+        }
+    });
+}, { threshold: 0 });
+
+gamesDescriptionObserver.observe(gamesDescription);
+
+bannerObserver.observe(bannerSection);
 document.querySelectorAll(".menu-link").forEach(link => {
     link.addEventListener("click", (event) => {
 
@@ -59,3 +145,15 @@ window.addEventListener("scroll", () => {
     }
 
 }, { passive: true });
+const learnMore = document.querySelector(".learn-more-container");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            learnMore.classList.add("show");
+            observer.unobserve(learnMore);
+        }
+    });
+});
+
+observer.observe(learnMore);
