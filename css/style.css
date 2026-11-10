@@ -880,3 +880,14 @@ body {
 .menu-panel img {
     pointer-events: none;
 }
+.privacy-menu-link {
+    top: 60%;
+    left: 29%;
+    font-size: 24px;
+}
+
+.support-menu-link {
+    top: 65%;
+    left: 23%;
+    font-size: 24px;
+}
