@@ -866,3 +866,17 @@ body {
 .contact-menu-link {
     top: 45%;
 }
+.about-menu-link {
+    top: 55%;
+    left: 35%;
+    font-size: 24px;
+}
+.menu-panel a {
+    position: absolute;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.menu-panel img {
+    pointer-events: none;
+}

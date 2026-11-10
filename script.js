@@ -8,20 +8,26 @@ menuBtn.addEventListener("click", () => {
 });
 document.querySelectorAll(".menu-link").forEach(link => {
     link.addEventListener("click", (event) => {
+
+        if (link.target === "_blank") {
+            menuBtn.classList.remove("active");
+            menuPanel.classList.remove("active");
+            return;
+        }
+
         event.preventDefault();
 
         const targetId = link.getAttribute("href");
         const target = document.querySelector(targetId);
 
         if (target) {
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+            const targetPosition =
+                target.getBoundingClientRect().top + window.scrollY;
 
             window.scrollTo({
                 top: targetPosition,
                 behavior: "smooth"
             });
-        } else {
-            console.log("Target section not found:", targetId);
         }
 
         menuBtn.classList.remove("active");
