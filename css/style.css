@@ -981,3 +981,33 @@ body {
     opacity: 1;
     translate: 0 0;
 }
+.games-rush-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-rush-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-banner .games-extinction-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-banner .games-extinction-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}
+.games-banner .games-brothers-logo {
+    opacity: 0;
+    translate: 0 50px;
+    transition: opacity 1s ease, translate 1s ease;
+}
+
+.games-banner .games-brothers-logo.show {
+    opacity: 1;
+    translate: 0 0;
+}

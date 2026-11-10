@@ -1,3 +1,12 @@
+const menuBtn = document.querySelector(".menu-btn");
+const menuPanel = document.querySelector("#menuPanel");
+const siteHeader = document.querySelector(".site-header");
+
+// MENU OPEN / CLOSE
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    menuPanel.classList.toggle("active");
+});
 const bannerSection = document.querySelector(".banner");
 const bannerText = document.querySelector(".banner-text");
 
@@ -90,12 +99,59 @@ const gamesDescriptionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0 });
 
 gamesDescriptionObserver.observe(gamesDescription);
+const gamesRushLogo = document.querySelector(".games-rush-logo");
+
+const gamesRushObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            gamesRushLogo.classList.add("show");
+            gamesRushObserver.unobserve(gamesRushLogo);
+        }
+    });
+}, { threshold: 0 });
+
+gamesRushObserver.observe(gamesRushLogo);
+
+const extinctionLogo = document.querySelector(".games-extinction-logo");
+
+const extinctionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            extinctionLogo.classList.add("show");
+            extinctionObserver.unobserve(extinctionLogo);
+        }
+    });
+}, {
+    threshold: 0,
+    rootMargin: "0px 0px 100px 0px"
+});
+
+extinctionObserver.observe(extinctionLogo);
+const brothersLogo = document.querySelector(".games-brothers-logo");
+
+if (brothersLogo) {
+    const brothersObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                brothersLogo.classList.add("show");
+                brothersObserver.unobserve(brothersLogo);
+            }
+        });
+    }, {
+        threshold: 0,
+        rootMargin: "0px 0px 100px 0px"
+    });
+
+    brothersObserver.observe(brothersLogo);
+}
 
 bannerObserver.observe(bannerSection);
 document.querySelectorAll(".menu-link").forEach(link => {
     link.addEventListener("click", (event) => {
 
-        if (link.target === "_blank") {
+        const targetId = link.getAttribute("href");
+
+        if (!targetId.startsWith("#")) {
             menuBtn.classList.remove("active");
             menuPanel.classList.remove("active");
             return;
@@ -103,7 +159,6 @@ document.querySelectorAll(".menu-link").forEach(link => {
 
         event.preventDefault();
 
-        const targetId = link.getAttribute("href");
         const target = document.querySelector(targetId);
 
         if (target) {
