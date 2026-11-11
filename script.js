@@ -212,3 +212,18 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(learnMore);
+// Prevent Ctrl + Plus, Minus, and Zero zoom shortcuts
+document.addEventListener("keydown", function (event) {
+    if (event.ctrlKey || event.metaKey) {
+        if (["+", "-", "=", "0"].includes(event.key)) {
+            event.preventDefault();
+        }
+    }
+});
+
+// Prevent Ctrl + Mouse Wheel zoom
+document.addEventListener("wheel", function (event) {
+    if (event.ctrlKey) {
+        event.preventDefault();
+    }
+}, { passive: false });
